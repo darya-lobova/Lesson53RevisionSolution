@@ -12,9 +12,17 @@
 
 int sum(int n, int m) {
 
-	if (n == -m) {
-		return 0;
+	//base case
+	if (n == m) {
+		return n;
 	}
 
-	return m + sum(n , m - 1);
+	if (n > m) {
+		int t = n;
+		n = m;
+		m = t;
+	}
+
+	//recursion case
+	return n + sum(n + 1 , m);
 }
