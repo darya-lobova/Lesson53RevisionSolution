@@ -10,5 +10,5 @@ int sum_of_cubes(int number) {
 		return number;
 	}
 
-	return number*number*number + sum_of_cubes((number - 1) * (number - 1) * (number - 1));
+	return number*number*number + sum_of_cubes(number - 1);
 }
