@@ -8,6 +8,7 @@ int count_of_odd_digits(int number) {
 
 	number = number < 0 ? -number : number;
 
+	//base case
 	if (number == 0) {
 		return 0;
 	}
@@ -15,6 +16,7 @@ int count_of_odd_digits(int number) {
 	int d1 = number % 10;
 	int count = d1 % 2 == 0 ? 0 : 1;
 
+	//recursion case
 	return count + count_of_odd_digits(number / 10);
 
 }
