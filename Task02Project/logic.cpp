@@ -5,3 +5,25 @@
 // которая находит n-ное число в последовательности 
 // ряда Фибоначчи с другим началом, где первые два числа равны 1,
 // а каждое следующее – сумме двух предыдущих: 1, 1, 2, 3, 5, 8, 13, …
+
+
+//Best case:O(1)
+//Worst case: O(N)
+int fibonacci(int index) {
+
+	if (index < 0) {
+		return index;
+	}
+
+	if (index == 0) {
+		return 0;
+	}
+
+	//base-case
+	if (index <= 2) {
+		return 1;
+	}
+
+	//recursion-case
+	return fibonacci(index - 1) + fibonacci(index - 2);
+}
