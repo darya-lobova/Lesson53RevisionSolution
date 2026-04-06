@@ -7,16 +7,12 @@
 // а каждое следующее – сумме двух предыдущих: 1, 1, 2, 3, 5, 8, 13, …
 
 
-//Best case:O(1)
+//Best case: O(1)
 //Worst case: O(N)
 int fibonacci(int index) {
 
-	if (index < 0) {
+	if (index <= 0) {
 		return index;
-	}
-
-	if (index == 0) {
-		return 0;
 	}
 
 	//base-case
